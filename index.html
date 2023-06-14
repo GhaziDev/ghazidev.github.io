@@ -15,17 +15,6 @@
     <a id="sk" href="#skls">Skills</a>
     <a id="co" href="#cntct"> Contact </a>
   </div>
-  <div class="scroller">
-    <div class="intro"><span></span></div>
-    <div class="trace"></div>
-    <div class="about-sec"><span></span></div>
-    <div class="trace"></div>
-    <div class="projects-sec"><span></span></div>
-    <div class="trace"></div>
-    <div class="skills-sec"><span></span></div>
-    <div class="trace"></div>
-    <span></span>
-  </div>
   <div class="heading appear2">
     <div id="left">
       <div id="first">GHAZI</div>
@@ -34,12 +23,11 @@
       <button id="download" onclick="downloadCV()">Download CV</button>
     </div>
     <div id="right">
-      <img
-        src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1120&q=80"
-      />
-    </div>
-  </div>
 
+    </div>
+    
+  </div>
+<div class="pads"></div>
   <div id="abt" class="about appear2">
     <div class="sec">
       <span>About Me</span>
@@ -311,6 +299,7 @@
     <div class="padsdown"></div>
   </div>
 
+
   <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -357,12 +346,17 @@
         if (entry.isIntersecting) {
           document.getElementById(en[entry.target.className]).style.color =
             "rgba(58, 147, 211, 0.98)";
+            document.getElementById(en[entry.target.className]).style.textShadow =
+            "1px 1px 10px";
         } else {
           document.getElementById(en[entry.target.className]).style.color =
             "white";
+            document.getElementById(en[entry.target.className]).style.textShadow =
+            "none";
         }
       });
     };
+
 
     let ob = new IntersectionObserver(section, options);
     ob.observe(about);

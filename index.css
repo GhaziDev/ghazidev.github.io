@@ -3,6 +3,11 @@ body {
   padding: 0;
 }
 
+::selection {
+  color: #88dded;
+  background-color: #171616;
+}
+
 button {
   outline: none;
   cursor: pointer;
@@ -43,6 +48,13 @@ a:hover {
 
 #right {
   display: flex;
+  width: 100%;
+  height: auto;
+  background: url("https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1120&q=80");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .appear2 {
@@ -51,6 +63,7 @@ a:hover {
   transform: translateY(45px);
 }
 .appear2.inview {
+  animation: animate 1s ease forwards;
   opacity: 1;
   transform: none;
 }
@@ -68,6 +81,20 @@ a:hover {
 }
 .appear2.inview:nth-child(5) {
   transition-delay: 0.5s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .about {
@@ -459,6 +486,7 @@ span {
   outline: none;
   border: none;
   padding: 15px;
+  box-shadow: 4px 1px 12px rgba(58, 147, 211, 0.98);
 }
 
 .name:focus {
@@ -473,6 +501,7 @@ span {
   border: none;
   resize: vertical;
   padding: 15px;
+  box-shadow: 4px 1px 12px rgba(58, 147, 211, 0.98);
 }
 
 .content:focus {
