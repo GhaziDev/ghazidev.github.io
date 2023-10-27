@@ -281,6 +281,46 @@ span {
 
 }
 
+
+.certificates{
+  display:flex;
+  width:100%;
+  flex-flow: column wrap;
+}
+
+.certslist{
+  display:flex;
+  flex-flow:column wrap;
+  gap:10px;
+  padding:45px;
+}
+
+
+.acert{
+  display:flex;
+  flex-flow: column wrap;
+  width:400px;
+  gap:5px;
+  border:none;
+  border-radius:5px;
+  background-color: #1b1b1b;
+  padding:20px;
+
+
+}
+
+.pdate{
+  color: #39FF14;
+}
+
+.expdate{
+  color:#FF3131;
+}
+
+.provider{
+  color:#FE347E;
+}
+
 .sortskills {
   display: flex;
   justify-content: center;

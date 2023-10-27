@@ -12,8 +12,10 @@
     <a id="ab" href="#abt">About me</a>
     <a id="ex" href="#xp">Experience</a>
     <a id="pr" href="#prjcts">Projects</a>
+    <a id="ce" href="#certs">Certificates</a>
     <a id="sk" href="#skls">Skills</a>
     <a id="co" href="#cntct"> Contact </a>
+   
   </div>
   <div class="heading appear2">
     <div id="left">
@@ -146,7 +148,7 @@
                 side, the website uses a session based authentication for login
                 system, the backend was implemented in Django, frontend in
                 react, and next, and designing the website was done in html and
-                css, and file uplaoding is done through AWS S3 storage
+                css and scss, and file uplaoding (images and media) is done through AWS S3 storage.
               </div>
               <div class="link">
                 <a href="https://www.globeofarticles.com/">Visit Website</a>
@@ -244,6 +246,30 @@
     </div>
   </div>
   <div class="pads"></div>
+    <div id='certs' class="certificates appear2">
+      <div class="sec">
+        Certificates
+      
+      <div id="line"></div>
+    </div>
+      <div class="certslist">
+        <div class="acert">
+        <div class="certname"> CAPM (Certified Associate in Project Management)</div>
+        <div class="pdate">Achieved By: 26th of May 2023</div>
+        <div class='provider'>Provider: PMI</div>
+        <div class="expdate">Expire Date: May 2026</div>
+      </div>
+      <div class="acert">
+        <div class="certname"> AWS Developer Associate</div>
+        <div class="pdate">Acheived By: To Be Achieved</div>
+        <div class='provider'>Provider: Amazon</div>
+        <div class='expdate'>Expire Date: N/A</div>
+      </div>
+
+      </div>
+
+    </div>
+  <div class="pads"></div>
   <div id="skls" class="skills appear2">
     <div class="sec">
       Skills
@@ -279,8 +305,13 @@
         <img src="/js.png" />
         Javascript
       </div>
+      <div class="icon">
+        <img src="/git.png" />
+        Git
+      </div>
     </div>
   </div>
+  
   <div class="pads"></div>
   <div id="cntct" class="contact appear2">
     <div class="sec">
@@ -296,6 +327,7 @@
         <button class="sbmt" type="submit">Send</button>
       </div>
     </div>
+    
     <div class="padsdown"></div>
   </div>
 
@@ -318,13 +350,15 @@
 
   <script>
     const downloadCV = () => {
-      window.open("/ghazidev_cv.pdf");
+      window.open("/ghazicv.pdf");
     };
+
     const about = document.querySelector(".about");
     const projects = document.querySelector(".projects");
     const exp = document.querySelector(".experience");
     const skills = document.querySelector(".skills");
     const co = document.querySelector(".contact");
+    const ce = document.querySelector('.certificates')
     options = {
       threshold: "0.5",
     };
@@ -340,6 +374,8 @@
         "skills appear2 inview": "sk",
         "contact appear2": "co",
         "contact appear2 inview": "co",
+        "certificates appear2":"ce",
+        "certificates appear2 inview":"ce"
       };
 
       entries.forEach((entry) => {
@@ -364,6 +400,7 @@
     ob.observe(exp);
     ob.observe(skills);
     ob.observe(co);
+    ob.observe(ce)
 
     const appear = document.querySelectorAll(".appear2");
     const cb = function (entries) {
