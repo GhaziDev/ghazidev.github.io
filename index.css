@@ -3,6 +3,11 @@ body {
   padding: 0;
 }
 
+::selection {
+  color: #88dded;
+  background-color: #171616;
+}
+
 button {
   outline: none;
   cursor: pointer;
@@ -52,11 +57,10 @@ a:hover {
   background-position: center;
 }
 
-
 .appear2 {
   transition: opacity 0.7s;
   opacity: 0;
-  transform: translateY(4px);
+  transform: translateY(45px);
 }
 .appear2.inview {
   animation: animate 1s ease forwards;
@@ -81,13 +85,15 @@ a:hover {
 @keyframes animate {
   0% {
     opacity: 0;
-    transform: scale(0);
+    transform: translateX(-200px);
   }
-
-  
+  50% {
+    opacity: 0.5;
+    transform: translateX(0);
+  }
   100% {
     opacity: 1;
-    transform: scale(1);
+    transform: none;
   }
 }
 
@@ -269,6 +275,42 @@ span {
   display: flex;
   width: 100%;
   flex-flow: column wrap;
+}
+
+.certificates {
+  display: flex;
+  width: 100%;
+  flex-flow: column wrap;
+}
+
+.certslist {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 10px;
+  padding: 45px;
+}
+
+.acert {
+  display: flex;
+  flex-flow: column wrap;
+  width: 400px;
+  gap: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1b1b1b;
+  padding: 20px;
+}
+
+.pdate {
+  color: #39FF14;
+}
+
+.expdate {
+  color: #FF3131;
+}
+
+.provider {
+  color: #FE347E;
 }
 
 .sortskills {
