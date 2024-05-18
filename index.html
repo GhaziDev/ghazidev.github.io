@@ -14,6 +14,11 @@
     <a id="pr" href="#prjcts">Projects</a>
     <a id="sk" href="#skls">Skills</a>
     <a id="co" href="#cntct"> Contact </a>
+
+    <a id="ce" href="#certs">Certificates</a>
+    <a id="sk" href="#skls">Skills</a>
+    <a id="co" href="#cntct"> Contact </a>
+   
   </div>
   <div class="heading appear2">
     <div id="left">
@@ -47,14 +52,24 @@
           at AUT. I discovered that I have a
           passion for web development, so i decided to do personal projects
           related to that field, started doing some Django backend
+          Hello my name is Ghazi, I am Studying Bachelor of Software Engineering
+          at AUT, I will be graduating this year. I discovered that I have a
+          passion for web development, so i decided to do personal projects
+          related to web developement, started doing some Django backend
           developement, then decided to learn React as frontend tool to
           understand how both ends communicate with each others, and then i
           decided to learn web design with CSS and HTML. I have also taken
           interest into devOps and the science behind deploying your website and
+
           storing data on cloud, so i decided to learn AWS. My next
           step is to learn other AWS services by studing developer certificate and
           applying the knowledge to my projects. My main hobbies are: Listening to music,Programming,
           Reading, and going to gym.
+          storing data on cloud, so i decided to learn AWS, one of my websites
+          (Globe of articles) has images uploaded through S3 storage. My next
+          step is to learn other AWS services such as EC2, RDS, and lambda and
+          applying them to my projects. My main hobbies are: Programming,
+          Reading, Gaming, and going to gym.
         </div>
         <div class="btns">
           <button class="socialbtn git">
@@ -99,6 +114,17 @@
         <div class="company">Auckland University of Technology</div>
         <div class="date">Part-Time</div>
         <div class="date">Period: June 2023 - June 2024</div>
+        <div class="job-title">Produce Assistant</div>
+        <div class="company">Countdown</div>
+        <div class="date">Part-Time</div>
+        <div class="date">Period: March 2022 - June 2023</div>
+      </div>
+      <div class="exp1">
+        <img class="exp-img" src="vol.png" />
+        <div class="job-title">Volunteer Retailer</div>
+        <div class="company">Red Cross</div>
+        <div class="date">Part-Time</div>
+        <div class="date">Period: December 2020 - December 2021</div>
       </div>
     </div>
   </div>
@@ -146,6 +172,8 @@
                 system, the backend was implemented in Django, frontend in
                 react, and next, and designing the website was done in html and
                 css, and file uplaoding is done through AWS S3 storage
+
+                css and scss, and file uplaoding (images and media) is done through AWS S3 storage.
               </div>
               <div class="link">
                 <a href="https://www.globeofarticles.com/">Visit Website</a>
@@ -174,6 +202,12 @@
                 tasks from low to medium to high, all tasks are grouped in a
                 todo list of the day, the user can know about
                 overdue/completed todo lists of past days.The application
+                In order to easily manage my time, I decided to create a
+                personal todo list, the application let the user perform all
+                CRUD'S operations on some task, it let the user prioritize their
+                tasks from low to medium to high, all tasks are grouped in a
+                todo list of the day, it also tell the user about
+                overdue/completed todo lists of some past day.The application
                 has been thourougly tested in the backend using django unit
                 testing, and has been beautifully designed using html and css.
                 React was used as a medium for state management and API
@@ -181,6 +215,8 @@
               </div>
               <div class="link">
                 <a href="https://github.com/GhaziDev/TodoApp/tree/master">Source Code</a>
+                <a href="https://www.globeofarticles.com/">Source Code</a>
+
               </div>
             </div>
           </div>
@@ -243,6 +279,30 @@
     </div>
   </div>
   <div class="pads"></div>
+    <div id='certs' class="certificates appear2">
+      <div class="sec">
+        Certificates
+      
+      <div id="line"></div>
+    </div>
+      <div class="certslist">
+        <div class="acert">
+        <div class="certname"> CAPM (Certified Associate in Project Management)</div>
+        <div class="pdate">Achieved By: 26th of May 2023</div>
+        <div class='provider'>Provider: PMI</div>
+        <div class="expdate">Expire Date: May 2026</div>
+      </div>
+      <div class="acert">
+        <div class="certname"> AWS Developer Associate</div>
+        <div class="pdate">Acheived By: To Be Achieved</div>
+        <div class='provider'>Provider: Amazon</div>
+        <div class='expdate'>Expire Date: N/A</div>
+      </div>
+
+      </div>
+
+    </div>
+  <div class="pads"></div>
   <div id="skls" class="skills appear2">
     <div class="sec">
       Skills
@@ -280,6 +340,14 @@
       </div>
     </div>
   </div>
+
+      <div class="icon">
+        <img src="/git.png" />
+        Git
+      </div>
+    </div>
+  </div>
+  
   <div class="pads"></div>
   <div id="cntct" class="contact appear2">
     <div class="sec">
@@ -295,6 +363,7 @@
         <button class="sbmt" type="submit">Send</button>
       </div>
     </div>
+    
     <div class="padsdown"></div>
   </div>
 
@@ -317,13 +386,18 @@
 
   <script>
     const downloadCV = () => {
+
       window.open("/updatednewcv.pdf");
     };
+      window.open("/ghazicv.pdf");
+    };
+
     const about = document.querySelector(".about");
     const projects = document.querySelector(".projects");
     const exp = document.querySelector(".experience");
     const skills = document.querySelector(".skills");
     const co = document.querySelector(".contact");
+    const ce = document.querySelector('.certificates')
     options = {
       threshold: "0.5",
     };
@@ -339,6 +413,8 @@
         "skills appear2 inview": "sk",
         "contact appear2": "co",
         "contact appear2 inview": "co",
+        "certificates appear2":"ce",
+        "certificates appear2 inview":"ce"
       };
 
       entries.forEach((entry) => {
@@ -363,6 +439,7 @@
     ob.observe(exp);
     ob.observe(skills);
     ob.observe(co);
+    ob.observe(ce)
 
     const appear = document.querySelectorAll(".appear2");
     const cb = function (entries) {
