@@ -301,8 +301,9 @@ span {
   background-color: #1b1b1b;
   padding: 20px;
   cursor:pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.32s ease-in-out;
 }
+
 
 .acert:hover{
   transform:scale(1.02)
