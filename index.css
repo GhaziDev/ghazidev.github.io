@@ -285,9 +285,10 @@ span {
 
 .certslist {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   gap: 10px;
   padding: 45px;
+
 }
 
 .acert {
@@ -299,7 +300,76 @@ span {
   border-radius: 5px;
   background-color: #1b1b1b;
   padding: 20px;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
 }
+
+.acert:hover{
+  transform:scale(1.02)
+}
+
+
+
+.acert a{
+  outline:none;
+  text-decoration: inherit;
+  text-wrap: none;
+  text-overflow: none;
+  user-select: none;
+  color:inherit;
+
+
+}
+
+
+
+a{
+  text-transform: none;
+}
+
+.degree{
+  background-color: #002D62;
+  display: flex;
+  flex-flow: column wrap;
+  width: 400px;
+  gap: 5px;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.star{
+  width:fit-content;
+  font-size:12em;
+  background:yellow;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  width:25px;
+  height:25px;
+  animation:spark 2s infinite;
+}
+
+@keyframes spark{
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(1);
+
+  }
+  50% {
+    transform:scale(0.5)
+  }
+  75% {
+    transform:scale(0.75)
+  }
+  100% {
+    transform: scale(0.25);
+
+
+  }
+}
+
 
 .pdate {
   color: #39FF14;
