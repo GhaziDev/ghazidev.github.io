@@ -12,6 +12,7 @@
     <a id="ab" href="#abt">About me</a>
     <a id="ex" href="#xp">Experience</a>
     <a id="pr" href="#prjcts">Projects</a>
+    <a id="ce" href="#certs">Certificates</a>
     <a id="sk" href="#skls">Skills</a>
     <a id="co" href="#cntct"> Contact </a>
   </div>
@@ -139,7 +140,7 @@
                 <div class="aws">AWS</div>
               </div>
               <div class="pdesc">
-                This website was a big milestone to enhance my experience, the
+                This website was a big milestone that enhanced my experience, the
                 main purpose of the website is to give the user the ability to
                 share their opinions concering a specific topic. From technical
                 side, the website uses a session based authentication for login
@@ -243,6 +244,31 @@
     </div>
   </div>
   <div class="pads"></div>
+    <div id='certs' class="certificates appear2">
+      <div class="sec">
+        Certificates
+
+      <div id="line"></div>
+    </div>
+      <div class="certslist">
+        <div class="acert">
+          <div class="certname"> AWS Developer Associate</div>
+          <div class="pdate">Obtained By: 28th of August 2024 </div>
+          <div class='provider'>Provider: Amazon</div>
+          <div class='expdate'>Expire Date: August 2027</div>
+        </div>
+        <div class="acert">
+        <div class="certname"> CAPM (Certified Associate in Project Management)</div>
+        <div class="pdate">Obtained By: 26th of May 2023</div>
+        <div class='provider'>Provider: PMI</div>
+        <div class="expdate">Expire Date: May 2026</div>
+      </div>
+     
+
+      </div>
+
+    </div>
+  <div class="pads"></div>
   <div id="skls" class="skills appear2">
     <div class="sec">
       Skills
@@ -286,17 +312,26 @@
       Contact
       <div id="line"></div>
       <div class="form">
-        <input class="name" type="text" placeholder="Enter Your Name Here" />
+        <form class ='form' action="https://formsubmit.co/2dd4a3559b00fae58a444f90612c4398" method="POST">
+          
+        <input class="name" type="text" placeholder="Enter Your Email Here" name="email" required />
+
         <textarea
           class="content"
           type="text"
           placeholder="Write Here..."
+          name="text"
+
         ></textarea>
+        <input type="hidden" name="_captcha" value="false">
         <button class="sbmt" type="submit">Send</button>
+      </form>
       </div>
     </div>
     <div class="padsdown"></div>
+
   </div>
+  
 
 
   <script
@@ -323,6 +358,7 @@
     const projects = document.querySelector(".projects");
     const exp = document.querySelector(".experience");
     const skills = document.querySelector(".skills");
+    const certs = document.querySelector('.certslist')
     const co = document.querySelector(".contact");
     options = {
       threshold: "0.5",
@@ -334,9 +370,11 @@
         "about appear2 inview": "ab",
         "experience appear2": "ex",
         "skills appear2": "sk",
+        "certificates appear2":'ce',
         "projects appear2 inview": "pr",
         "experience appear2 inview": "ex",
         "skills appear2 inview": "sk",
+        "certificates appear2 inview":'ce',
         "contact appear2": "co",
         "contact appear2 inview": "co",
       };
